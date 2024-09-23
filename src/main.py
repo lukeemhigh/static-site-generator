@@ -1,10 +1,9 @@
-from textnode import TextNode
+from utils import recursive_copy, generate_pages_recursive
 
 
 def main():
-    dummy_node = TextNode("This is a text node", "bold", "https://www.boot.dev")
-
-    print(dummy_node.__repr__())
+    recursive_copy("static", "public")
+    generate_pages_recursive("content", "template.html", "public")
 
 
 if __name__ == "__main__":
